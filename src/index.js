@@ -22,15 +22,22 @@ import patch from "./MySnabbdom/patch";
 // ])
 // let myVNode1 = h('h1', {}, "hello")
 let myVNode1 = h('h1', {}, [
-    h('h2', {key:"a"}, "hello"),
-    h('h2', {key:"b"}, "hi"),
-    h('h2', {key:"c"}, "hello-hi")
+    h('h2', {key: "a"}, "a"),
+    h('h2', {key: "b"}, "b"),
+    h("h2", {key: "c"}, "c"),
+    h("h2", {key: "d"}, "d"),
+    h("h2", {key: "e"}, "e"),
+    h("h2", {key: "f"}, "f"),
 ])
 
 let myVNode2 = h('h1', {}, [
-    h('h2', {key:"a"}, "hello"),
+    h("h2", {key: "f"}, "f"),
+    h('h2', {key: "a"}, "a"),
+    h("h2", {key: "e"}, "e"),
+    h("h2", {key: "d"}, "d"),
+    h("h2", {key: "g"}, "g"),
+    h("h2", {key: "c"}, "c"),
 ])
-
 const div = document.querySelector("div")
 
 
